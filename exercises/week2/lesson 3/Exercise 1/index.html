@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Exercise 1 </title>
+</head>
+<body>
+		<h2>Thanh toán</h2>
+		<form action="/action_gape.php" method="get">
+			<label for="fullname">Tên đầy đủ:</label>
+			<input id="fullname" name="name" type="text" placeholder="Nhập tên đầy đủ người mua hàng" size="50"></input><br><br>
+			<label for="fullname">Password</label>
+			<input id="password" type="text" placeholder="Nhập Password"></input><br><br>
+			<label for="fullname">Email</label>
+			<input id="email" name="Email" type="text" placeholder="Nhập email"></input><br><br>
+			<label for="fullname">Ngày sinh</label>
+			<input name="date" type="date"></input><br><br>
+			<label for="fullname">Mặt hàng mua</label>
+			<input name="mathangmua" id="items"></input><br><br>
+				<datalist id="html">
+					<option value="Shoes"></option>
+					<option value="Socks"></option>
+					<option value="Shirt"></option>
+					<option value="Sandals"></option>
+					<option value="Trousers"></option>
+				</datalist>
+			<label for="fullname">Số lượng mua</label>
+			<input name="" type="number" min="1" max="5"></input><br><br>
+			<label for="fullname">Bán kính vận chuyển</label>
+			<input type="range" min="10"  max="20"></input><br><br>
+			<input type="submit" value="Đăng kí"></input>
+</body>
+</html>
