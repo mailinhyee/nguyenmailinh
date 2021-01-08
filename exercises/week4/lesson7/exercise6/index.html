@@ -1,77 +1,67 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Exercise6</title>
+	<title>nhap</title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous"></head>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-  	<style type="text/css">
-  		body{
-  			width: 450px;
-  			height:  500px;
-  			border: 10px solid blue;
-        margin:120px 500px 120px 500px;
-  		}
-  	form{
-  		margin: 30px 12px 10px 14px;
-  		width: 500px;
-  	}
-  	.button_fb{
-  		color: white;
-  		background-color: #0033CC;
-  		height: 40px;
-  		width: 130px;
-  	}
-  	.button_google{
-  		color: white;
-  		background-color: #FF0000;
-  		height: 40px;
-  		width: 130px;
-  	}
-  	.button_phone{
-  		color: white;
-  		background-color: #00CC00;
-  		height: 40px;
-  		width: 130px;
-  	}
-  	.email{
-  		background-color: #FFFFCC;
-  	}
-  	.password{
-  		background-color: #FFFFCC;
-  	}
-  	.button_login{
-  		width: 400px;
-  		height: 40px;
-  		background-color:#1E90FF;
-  	}
-  	.button_log_in{
-  		width: 400px;
-  		height: 40px;
-
-  	}
-  	</style>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous"></head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <style type="text/css">
+		.container{
+			width: 468px;
+  			height: 500px;
+			border: 10px solid blue;
+			margin: 100px 500px 120px 500px;
+			}
+		.login-form{
+			margin: 30px 12px 10px 14px;
+			width: 34.5%;
+		}
+		#section{
+			height: 40px;
+			width: 130px;
+			color: white;
+			border:none;
+		}
+		#content{
+			background-color: #FFFFCC;
+			color: blue;
+		}
+		#button{
+			width: 415px;
+			height: 40px;
+		}
+		.hr{
+		text-align: center;
+			border-bottom: 1px solid #c7adad;
+			line-height: 0.1em;
+			margin: 30px 0 11px;
+		}
+		.hr span{
+		background:#fff;
+		padding: 3px 2px;
+		}
+  </style>
 </head>
 <body >
-	<form >
-		<p>ĐĂNG NHẬP VỚI</p>
-		<button class="button_fb"><i class="fab fa-facebook-f"></i>&nbsp;Facebook</button>
-		<button class="button_google"><i class="fab fa-google"></i>&nbsp;Google</button>
-		<button class="button_phone"><i class="fas fa-phone"></i>&nbsp;Phone</button>
-		<p>HOẶC</p>
-		<p>
+	<form class="login-form">
+	<div class="container">
+		<p class="hr"><span>ĐĂNG NHẬP VỚI<span></p>
+		<button id="section" class="button_fb" style="background-color: #0033CC;"><i class="fab fa-facebook-f"></i>&nbsp;Facebook</button>
+		<button id="section" class="button_google" style="background-color: #FF0000;"><i class="fab fa-google"></i>&nbsp;Google</button>
+		<button id="section" class="button_phone" style="background-color: #00CC00;"><i class="fas fa-phone"></i>&nbsp;Phone</button>
+		<p class="hr"><span>HOẶC</span></p><br>
 			<label>Email*</label><br>
-			<input class="email" id="fullemail" type="text" name="email" size="50px;"><br>
+			<input class="email" id="content" type="text" name="email" size="55"><br>
 			<label>Mật khẩu*</label><br>
-			<input class="password" type="password" name="password" size="50px;">
+			<input class="password" id="content" type="password" name="password" size="55">
 			<br>
-			<input type="checkbox" name="checkbox"> Tự động đăng nhập &nbsp &nbsp &nbsp Quên mật khẩu?<br>
-			<button class="button_login" >Đăng Nhập</button>
-			<p>bạn chưa có tài khoản</p>
-			<button class="button_log_in"> Đăng Ký Nhanh</button>
-		</p>
+			<input type="checkbox" name="checkbox"> Tự động đăng nhập &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp Quên mật khẩu?<br>
+			<button id="button" class="login" style="background-color:#1E90FF;color:white;" >Đăng Nhập<i class="fas fa-angle-right"></i></button>
+			<p class="hr"><span>Bạn chưa có tài khoản?</span></p>
+			<button id="button" class="singup"> Đăng Ký Nhanh</button>
+	</div>
 	</form>
 </body>
 </html>

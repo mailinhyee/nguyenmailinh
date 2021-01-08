@@ -12,14 +12,7 @@
 			.sign-up-content form fieldset{
 			border: none;
 		}
-		.infomation input{
-			padding: 5px;
-			width: 99%;
-			margin: 3px 0;
-			border: 1px solid #bbb6ac;
-			border-radius: 6px;
-		}
-		.infomation textarea{
+		#section{
 			padding: 5px;
 			width: 99%;
 			margin: 3px 0;
@@ -39,9 +32,6 @@
 			padding-left: 10px;
 			border-radius: 6px;
 		}
-		#button{
-			background-color: #3399FF;
-		}
 	</style>
 </head>
 <body>
@@ -51,33 +41,33 @@
 				<h1>Đăng ký thành viên</h1>
 				<p>Để đăng ký thành viên, bạn cần khai báo tất cả các ô trống dưới đây</p>
 				<fieldset class="infomation">
-					<input type="text" name="Surname_and_middle_name" placeholder="Họ và tên đệm" size = 70px; ></input>
-					<input type="text" name="name" placeholder="Tên" size = 70px;></input>
-					<input type="text" name="user_name" placeholder="Tên đăng nhập" size = 70px;></input>
-					<input type="text" name="email" placeholder="Email" size = 70px;></input>
-					<input type="password" name="password1" placeholder="Mật khẩu" size = 70px;></input>
-					<input type="password" name="password2" placeholder="Lặp lại mật khẩu" size = 70px;></input>
+					<input id="section" type="text" name="Surname_and_middle_name" placeholder="Họ và tên đệm" size = 70px; ></input>
+					<input id="section" type="text" name="name" placeholder="Tên" size = 70px;></input>
+					<input id="section" type="text" name="user_name" placeholder="Tên đăng nhập" size = 70px;></input>
+					<input id="section" type="text" name="email" placeholder="Email" size = 70px;></input>
+					<input id="section" type="password" name="password1" placeholder="Mật khẩu" size = 70px;></input>
+					<input id="section" type="password" name="password2" placeholder="Lặp lại mật khẩu" size = 70px;></input>
 				</fieldset>
-				<h4>Giới tính</h4>
-					<input type="radio" name="sex" value="N/A">N/A
-					<input type="radio" name="sex" value="Nam">Nam
-					<input type="radio" name="sex" value="Nữ">Nữ</h4>
+				<h4>Giới tính
+					<input type="radio" name="gather" value="N/A">N/A
+					<input type="radio" name="gather" value="Nam">Nam
+					<input type="radio" name="gather" value="Nữ">Nữ</h4>
 					<fieldset class="infomation">
-						<input type="date" name="brithday" size = 70px;>
-						<textarea  name="signature"placeholder="Chữ ký" size = 70px;></textarea>
-						<input list="private-question" name="privite-question" placeholder="Câu hỏi bảo mật"size = 70px;>
+						<input id="section" type="date" name="brithday" size = 70px;>
+						<textarea id="section"  name="signature"placeholder="Chữ ký" size = 70px;></textarea>
+						<input id="section" list="private-question" name="privite-question" placeholder="Câu hỏi bảo mật"size = 70px;>
                     	<datalist id="private-question">
                         	<option value="Bạn sinh ở đâu?"></option>
                         	<option value="Sở thích của bạn là gì?"></option>
                         	<option value="Bạn học trường nào?"></option>
                      </datalist><br><br>
-					<input type="text" name="answer" placeholder="Trả lời câu hỏi">
+					<input id="section" type="text" name="answer" placeholder="Trả lời câu hỏi">
 					</fieldset>
 				<fieldset >
 					<div class="submit" align="center">
 						<input type="checkbox" name="agree">Tôi đồng ý với 
 						<button>Quy định đăng ký thành viên</button><br><br>
-						<button type="reset">Thiết lập lại</button><button  type="submit" id="button">Đăng ký thành viên</button>
+						<button type="reset">Thiết lập lại</button><button style="background-color: #3399FF;" type="submit">Đăng ký thành viên</button>
 					</div>
 				</fieldset>
 			</form>
