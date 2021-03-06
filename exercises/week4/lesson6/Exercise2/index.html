@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Exercise2</title>
+</head>
+<body>
+	<label>So a:</label>
+	<input type="text" name="soa" id="a">
+	<label>So b:</label>
+	<input type="text" name="sob" id="b">
+	<label>So c:</label>
+	<input type="text" name="soc" id="c">
+	<input type="button" name="max" id="max" onclick="solon()">
+	<input type="button" onclick="solon()" value="max">
+	<script language="javascript">
+		function solon() {
+			var a = parseInt(a).value;
+			var b = parseInt(b).value;
+			var c = parseInt(c).value;
+			var max;
+			if (a>b && a>c) {
+				max=a;
+			}
+			else if (b>a && b>c) {
+				max=b;
+			}
+			else {
+				max=c;
+			}
+		};
+		document.getElementsById('max').innerHTML= max;
+	</script>
+</body>
+</html>

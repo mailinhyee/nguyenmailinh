@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Exercise 3</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h3>Máy Tính</h3>
+        <label for="firstNumber">Số thứ nhất</label>
+        <input type="number" name="firstNumber" id="firstNumber" min="1" max="100" required> <span>*</span><br>
+        <label for="secondNumber">Số thứ hai</label>
+        <input type="number" name="secondNumber" id="secondNumber" min="1" max="100" required> <span>*</span> <br>
+        <label for="result">Kết quả</label>
+        <input type="number" name="result" id="result"> <br>
+        <button id="addition" onclick="addition()">Cộng</button>
+        <button id="subtraction" onclick="subtraction()">Trừ</button>
+        <button id="multiplication" onclick="multiplication()">Nhân</button>
+        <button id="division" onclick="division()">Chia</button>
+        <button id="clear" onclick="clear()">Xóa trắng</button>
+        <p id="result"></p>
+    </div>
+    <script>
+        $(document).ready(function(){
+            $(document).on("click","button:not(:last)",function(){
+                if($("#firstNumber").val()==''){
+                    $("#firstNumber").next().html("* Không được để trống!");
+                }else{
+                    $("#firstNumber").next().html("*");
+                }
+                if($("#secondNumber").val()==''){
+                    $("#secondNumber").next().html("* Không được để trống!");
+                }else{
+                    $("#secondNumber").next().html("*");
+                }
+            })
+        })
+        function addition() {
+                var firstNumber = document.getElementById('firstNumber').value;
+                var secondNumber = document.getElementById('secondNumber').value;
+                var result = parseFloat() + parseFloat();
+            document.getElementById('result').innerHTML ="The Result Is: " + result;
+            }
+        function subtraction() {
+                var firstNumber = document.getElementById('firstNumber').value;
+                var secondNumber = document.getElementById('secondNumber').value;
+                var result = parseFloat() - parseFloat();
+            document.getElementById('result').innerHTML ="The Result Is: " + result;
+        }
+        function multiplication() {
+                var firstNumber = document.getElementById('firstNumber').value;
+                var secondNumber = document.getElementById('secondNumber').value;
+                var result = parseFloat() * parseFloat();
+            document.getElementById('result').innerHTML ="The Result Is: " + result;
+        }
+        function division() {
+                var firstNumber = document.getElementById('firstNumber').value;
+                var secondNumber = document.getElementById('secondNumber').value;
+                var result = parseFloat() / parseFloat();
+            document.getElementById('result').innerHTML ="The Result Is: " + result;
+        }
+    </script>
+</body>
+</html>

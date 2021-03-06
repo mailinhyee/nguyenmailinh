@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>test</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+ 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12 col-sm-10 col-md-6">
+		    <form role="form" name="registration">
+		    		<div>
+		    			Firstname<br>
+		    			<div class="form-group">
+			           		<input type="text" name="firstname" id="firstname"class="form-control input-sm" placeholder="First Name">
+		    			</div>
+		    		</div>
+		    		<div>
+		    			Lastname<br>
+		    			<div class="form-group">
+		  					<input type="text" name="lastname" id="lastname"class="form-control input-sm" placeholder="Last Name">
+		   				</div>
+		    		</div>
+		    		<div>
+		    			<input type="radio" name="gender" value="Male">Male
+		    			<input type="radio" name="gender" value="Female">Female
+		    		</div>
+		    		<div class="form-group">
+		    			<br>
+		    			<input type="date" name="date" id="date"class="form-control input-sm">
+		    		</div>
+		    	<button type="button" class="btn btn-primary">Submit</button>
+		   	</form>
+		</div>
+	</div>
+</div>
+<script type="text/javascript">
+	$(function() {
+  	$('#registration').validate({
+    rules: {	//xdformvilidation
+      firstname: "required",
+      lastname: "required",
+    messages: {	
+      firstname: "Please enter your firstname",
+      lastname: "Please enter your lastname",
+    },
+    submitHandler: function(form) {	//
+      form.submit();
+    }
+  	});
+	});
+</script>
+</body>
+</html>

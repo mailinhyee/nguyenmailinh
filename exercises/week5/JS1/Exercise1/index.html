@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Exercise1</title>
+</head>
+<body>
+        <label for="number">Nhập vào số a:</label>
+        <input type="text" name="number" id="number">
+        <button class="btn btn-primary" onclick="checkNumber()">Kiểm tra</button>
+        <p id="test"></p>
+    <script>
+        function checkNumber(){
+            var number=document.getElementById("number").value;
+            number=parseInt(number);
+            if(number<5 || (number>20 && number<50) || number>100){
+                document.getElementById("test").innerHTML= number+" không nằm trong khoảng từ 5 đến 20 hoặc từ 50 đến 100";
+            }
+            if((number>=5 && number<=20)||(number>=50 && number<=100)){
+                document.getElementById("test").innerHTML= number+" nằm trong khoảng từ 5 đến 20 hoặc từ 50 đến 100";
+            }
+        }
+    </script>
+</body>
+</html>
