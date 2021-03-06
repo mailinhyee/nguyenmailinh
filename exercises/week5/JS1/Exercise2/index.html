@@ -7,24 +7,20 @@
     <div class="container">
         <h3>Giải phương trình bậc nhất ax + b = 0</h3>
         <label for="numberA">Nhập vào hệ số a:</label>
-        <input type="text" name="numberA" id="numberA"><br><br>
+        <input type="number" name="numberA" id="numberA"><br><br>
         <label for="numberB">Nhập vào hệ số b:</label>
-        <input type="text" name="numberB" id="numberB">
+        <input type="number" name="numberB" id="numberB">
         <p>Phương trình bậc nhất của bạn đang có dạng</p>
         <p id="threads"></p>
-        <button onclick="findX()" onmouseover="showThreads()">Tìm X</button>
+        <button onclick="findX()">Tìm X</button>
         <p id="result"></p>
     </div>
     <script>
-        function showThreads(){
-            var numberA=parseInt(document.getElementById("numberA").value);
-            var numberB=parseInt(document.getElementById("numberB").value);
-            document.getElementById("threads").innerHTML= numberA+"x "+" + "+numberB +"=0";
-        }
         function findX(){
             var numberA=parseInt(document.getElementById("numberA").value);
             var numberB=parseInt(document.getElementById("numberB").value);
             document.getElementById("result").innerHTML="x= "+(-numberB/numberA);
+            document.getElementById("threads").innerHTML= numberA+"x "+" + "+numberB +"=0";
         }
     </script>
 </body>
